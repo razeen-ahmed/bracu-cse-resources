@@ -1,0 +1,61 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+
+int pernum(int num){
+
+    int sum = 0;
+    //printf("helooooooooo");
+    for (int i=1; i<num;i++){
+
+        if (num%i==0){
+
+            sum += i;
+
+        }
+    }
+    //printf("%d",&sum);
+
+    if (sum == num){
+
+        return 1;
+
+    }
+    else{
+
+        return 0;
+    }
+
+};
+
+int main(){
+
+    int start;
+    int end;
+
+    int get;
+
+    printf("Enter a range:\n");
+    scanf("%d",&start);
+    scanf("%d",&end);
+
+    //printf("%d",start);
+
+
+    for (int i=start;i<end;i++){
+        get = pernum(i);
+
+        //printf("%d",get);
+
+        if (get == 1){
+                printf("%d\n",i);
+
+        }
+    }
+
+
+    return 0;
+
+}
